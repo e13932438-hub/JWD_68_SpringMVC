@@ -7,7 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-<h3>Spring MVC</h3>
+<h3>Spring MVC Github</h3>
 <h3>${msg}</h3>
 </body>
 </html>
