@@ -1,4 +1,8 @@
 package com.spring.controller;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -26,4 +30,46 @@ public class StudentController {
 		return "student-info";
 
 }
+	
+	@ModelAttribute("frameworks_list")
+public List<String>	 getAllFrameworks(){
+	List<String> lst= new ArrayList<>();
+	lst.add("Spring Frameworks");
+	lst.add("Bootstrap");
+	lst.add("Collection Frameworks");
+	return lst;
+	
 }
+	@ModelAttribute("number_list")
+	public List<Integer> getAllNumbers(){
+		List<Integer> lst=new ArrayList<Integer>();
+		lst.add(1);
+		lst.add(2);
+		lst.add(3);
+		lst.add(4);
+		return lst;
+	}
+	@ModelAttribute("country_list")
+	public Map<String,String> getAllCountries(){
+		Map<String,String> map = new HashMap<String, String>();
+		map.put("MM", "Myanmar");
+		map.put("JP","Japan");
+		map.put("ka","Korea");
+		
+		
+		return map;
+	}
+	@ModelAttribute("skills_list")
+	public Map<String,String> getAllSkills(){
+		Map<String,String> map = new HashMap<String, String>();
+		map.put("HP", "Hyper Link");
+		map.put("IT","Information Tech");
+		map.put("DE","Dancer");
+		map.put("GE","Gaming");
+		
+		
+		return map;
+
+	
+}
+	}

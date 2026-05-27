@@ -16,9 +16,10 @@ color:red;
 </head>
 <body>
 <form:form modelAttribute="studObj" method="post" action="student-create">
-<form:label path="id">Id</form:label>
+<%-- <form:label path="id">Id</form:label>
 <form:input path="id"/>
-<form:errors path="id" cssClass="error"></form:errors>
+<form:errors path="id" cssClass="error"></form:errors>--%>
+<form:hidden path="id" value="1"/>
 <br>
 
 <form:label path="name">Name</form:label>
@@ -30,6 +31,40 @@ color:red;
 <form:input path="age"/>
 <form:errors path="age" cssClass="error"></form:errors>
 <br>
+<form:label path="password">Password</form:label>
+<form:password path="password"/>
+<br>
+<form:label path="address">Address</form:label>
+<form:textarea path="address"/>
+<br>
+<form:label path="newsLetter">Newsletter</form:label>
+<form:checkbox path="newsLetter"/>
+<br>
+<form:label path="frameworks">Frameworks</form:label>
+<form:checkboxes items="${frameworks_list}" path="frameworks"/>
+<br>
+<form:label path="gender">Gender</form:label>
+<form:radiobutton path="gender" value="male"/>Male
+<form:radiobutton path="gender" value="female"/>Female
+<br>
+<form:label path="favNumber">Favorite Number</form:label>
+<form:radiobuttons path="favNumber" items="${number_list}"/>
+<br>
+<form:label path="country">Country</form:label>
+<form:select path="country">
+<form:option value="none">None</form:option>
+<form:options items="${country_list}"/>
+</form:select>
+
+<br>
+<form:label path="skills">Skills</form:label>
+<form:select path="skills" muliiple="multiple">
+<form:options items="${skills_list}"/>
+</form:select>
+
+
+
+
 <input type="submit" value="create">
 </form:form>
 
